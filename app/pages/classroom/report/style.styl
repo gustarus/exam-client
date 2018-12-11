@@ -1,0 +1,71 @@
+@import '~@core/styles/mixins.styl'
+
+.container
+  composes container from 'stylus!@core/pages/whiteboard/session/style.styl'
+
+.hint
+  margin-top 25px
+  text-align center
+  +print()
+    display none
+
+.header
+  composes header from 'stylus!@core/pages/whiteboard/session/style.styl'
+
+.total
+  margin-top 25px
+  display flex
+  align-items flex-start
+
+.total__counter
+  composes counter from 'stylus!@core/pages/whiteboard/session/style.styl'
+  float left
+  margin 0
+
+.total__result
+  composes counter__result from 'stylus!@core/pages/whiteboard/session/style.styl'
+
+.total__table
+  flex-grow 1
+  padding-left 25px
+
+.total__row
+  padding 5px 10px
+  display flex
+  align-items flex-start
+  &:nth-child(2n+1)
+    color-adjust exact
+    -webkit-print-color-adjust exact
+    background-color rgba(237, 237, 237, 0.5)
+
+.total__th
+  flex-grow 1
+  font-weight bold
+
+.total__td
+  width 100px
+  text-align center
+
+.items
+  display block
+  position relative
+  margin-top 25px
+
+.question
+  display block
+  min-height auto
+  position relative
+  page-break-inside avoid
+  margin-top 25px
+  padding-top 25px
+  border-top 1px solid #ebebeb
+  &:first-of-type
+    border-top 0
+    padding-top 0
+  +print()
+    padding 20px !important
+    border 1px solid #ebebeb !important
+    border-radius 5px !important
+    color-adjust exact
+    -webkit-print-color-adjust exact
+    background-color rgba(237, 237, 237, 0.1)

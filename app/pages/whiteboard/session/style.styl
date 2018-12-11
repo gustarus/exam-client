@@ -1,0 +1,142 @@
+@import '~@core/styles/bricks'
+
+$brickMargin = 25px
+$brickWidth = 140px
+$brickHeight = 140px
+
+.url
+  margin-top 6px
+  width 100%
+  display block
+  height 30px
+  line-height 30px
+  padding 10px
+  outline none
+
+.header
+  display block
+  text-align center
+
+.block
+  clearfix()
+  display block
+  flex-flow row wrap
+  align-items stretch
+  padding-top 20px
+  margin-top 20px
+  border-top 1px solid #FCD9FF
+  &:first-of-type
+    border-top none
+    margin-top 0
+    padding-top 0
+
+.block__column
+  display inline-block
+  width 50%
+  vertical-align top
+
+.input
+  margin-top 25px
+
+.counter
+  width $brickWidth
+  height $brickHeight
+  padding 25px
+  position relative
+  margin $brickMargin auto 0
+  text-align center
+  border-radius 50%
+  &_left
+    float left
+
+.counter__label
+  display block
+  position relative
+  top 50%
+  left 50%
+  font-size 25px
+  transform translate(-50%, -50%)
+  line-height 33px
+
+.counter__indicator
+  indicator(dark)
+  width 100%
+  height 100%
+  position absolute
+  top 0
+  left 0
+  border-left-color #eccbef
+
+.counter__result
+  width 100%
+  height 100%
+  position absolute
+  top 0
+  left 0
+  border-left-color #eccbef
+
+.buttons
+  margin-top 25px
+  text-align center
+
+.button
+  button()
+  display inline-block
+  margin 0 5px
+
+.histogram
+  position relative
+  display block
+  margin $brickMargin auto 0
+  width $brickWidth
+  height $brickHeight
+
+.histogram__vertical
+  position absolute
+  width $brickHeight
+  top ($brickHeight / 2)
+  right 100%
+  margin-right -($brickHeight / 2) + 20px
+  transform translateY(-50%) rotate(-90deg)
+  text-align center
+  span
+    display block
+    position absolute
+    &:first-of-type
+    &:last-of-type
+      bottom -10px
+      font-size 10px
+    &:first-of-type
+      left 0
+    &:last-of-type
+      right 0
+
+.histogram__horizontal
+  width 100%
+  top 100%
+  margin-top 5px
+  position absolute
+  text-align center
+  span
+    display block
+    position absolute
+    &:first-of-type
+    &:last-of-type
+      top -5px
+      font-size 10px
+    &:first-of-type
+      left 0
+    &:last-of-type
+      right 0
+
+.histogram__columns
+  height 100%
+  display flex
+  align-items flex-end
+
+.histogram__column
+  display inline-block
+  vertical-align bottom
+  padding 0 1px
+  background-clip content-box
+  transition height .5s

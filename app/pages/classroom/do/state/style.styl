@@ -1,0 +1,31 @@
+.container
+  text-align center
+  background #f8f8f8
+  padding 5px
+  line-height 0
+  font-size 0
+
+.item
+  display inline-block
+  width 18px
+  height 18px
+  border-radius 50%
+  background #7b467f
+  margin 3px
+  &:hover
+  &:focus
+    box-shadow inset 1px 1px 1px 0 rgba(0, 0, 0, 0.75)
+
+.item_disabled
+  cursor default
+  background #999
+  &:hover
+  &:focus
+    box-shadow none
+
+.item_current
+  cursor default
+  background #2f8059
+  &:hover
+  &:focus
+    box-shadow none

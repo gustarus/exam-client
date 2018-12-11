@@ -1,0 +1,78 @@
+body
+  font-family $fontFamilyLight
+  font-size 16px
+  font-weight normal
+  font-style normal
+  line-height 21px
+  color #100012
+  width 100vw
+  height 100vh
+  overflow hidden
+  +print()
+    overflow scroll-y
+    height auto
+
+a
+  color #111
+  text-decoration none
+  &:hover,
+  &:focus
+    color rgb(217, 10, 45)
+    text-decoration none
+
+input
+textarea
+  font-size 14px
+  padding 6px 10px
+  outline none
+  &[type="text"]
+    width 100%
+    display block
+
+code
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 3px;
+
+#background
+  position fixed
+  width 110%
+  height 110%
+  left -5%
+  top -5%
+  transition transform .1s ease-out
+  background-image url('~@core/images/background.jpg')
+  background-color #fff
+  background-size cover
+  background-position center center
+  +print()
+    display none
+
+#stub
+  width 100%
+  height 100%
+  position fixed
+  top 0
+  left 0
+  z-index 1
+  +print()
+    display none
+
+#root
+  width 100%
+  height 100%
+  position fixed
+  top 0
+  left 0
+  z-index 100
+  transition transform .1s ease-out
+  +print()
+    position relative
+    height auto
+
+#spinner
+  position relative
+  z-index 200
+

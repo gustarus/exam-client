@@ -1,0 +1,19 @@
+.card
+  display block
+  position relative
+  padding 25px
+  border-radius 3px
+  background-color #fff
+  box-shadow 2px 2px 4px -2px rgba(0, 0, 0, 0.25)
+  &:not(:first-of-type)
+    margin-top 25px
+  +print()
+    box-shadow none
+  &_middle
+    display inline-block
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+  &__content
+    position relative
+    height 100%
