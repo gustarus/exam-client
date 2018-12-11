@@ -5,7 +5,11 @@ You can download mvp presentation.
 
 
 ## Quick start guide
-Clone the project.
+
+#### 0. Launch the server.
+Go to https://github.com/gustarus/exam-server to see details.
+
+#### 1. Clone the project.
 ```bash
 mkdir exam-client
 cd exam-client
@@ -13,17 +17,17 @@ git clone https://github.com/gustarus/exam-client.git
 cd client
 ```
 
-Use needed node version.
+#### 2. Use needed node version.
 ```bash
 nvm use
 ```
 
-Install dependencies.
+#### 3. Install dependencies.
 ```bash
 npm i
 ```
 
-Launch the project. Use **one** of following commands.
+#### 4. Launch the project. Use **one** of following commands.
 ```bash
 # launch development version
 npm run start
@@ -33,7 +37,7 @@ npm run start
 npm run proxy
 ```
 
-Open the project page.
+#### 5. Open the project page.
 ```
 open http://localhost:8080
 ```
